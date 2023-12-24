@@ -34,7 +34,8 @@ class _MatchHistoryState extends State<MatchHistoryScreen> {
               return ListView(
                 scrollDirection: Axis.vertical,
                 children: [
-                  for (var game in state.gamesHistory) _MatchHistoryCell(game),
+                  for (var game in state.gamesHistory.reversed)
+                    _MatchHistoryCell(game),
                 ],
               );
             },
